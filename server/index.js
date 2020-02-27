@@ -23,6 +23,8 @@ mongoose.connect(config.mongoURI, {
 
 app.get('/', (req, res) => res.send('Hello Change World!'))
 
+app.get('/api/hello', (req, res) => res.send("Hello~~~!!!"))
+
 app.post('/api/user/register', (req,res) => {
   const user = new User(req.body)
   //userモーデルにデータ保存
